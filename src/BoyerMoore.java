@@ -49,7 +49,7 @@ public class BoyerMoore {
              /* Shift the pattern so that the next character in text aligns with the last occurrence of it in pattern. 
                 The condition s+m < n is necessary for the case when pattern occurs at the end of text */
              count++;
-             System.out.print("m="+m+" "+badchar[txt[s+m]]+" "+txt[s+m]);
+             //System.out.print("m="+m+" "+badchar[txt[s+m]]+" "+txt[s+m]);
              s += (s+m < n)? m-badchar[txt[s+m]] : 1; // s=4 + 3-badchar[D] s = 4 + 3 - (-1) = 8
              System.out.print(s);
  
