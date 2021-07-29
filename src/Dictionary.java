@@ -15,15 +15,15 @@ public class Dictionary {
 		File file = new File(filename);
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String s;
-		String word = null;
+		String words[] = null;
 		
 		while((s = br.readLine()) != null) {
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(s);
 			while (scan.hasNext()) {
-				word = scan.next().replaceAll("[^a-zA-Z ]", "").toLowerCase();
-//				word=word.split(".");
-				aListWords.add(word);
+				words = scan.next().replaceAll("[^a-zA-Z]", "-").toLowerCase().split("-");
+				for(int i=0;i<words.length;i++)
+					aListWords.add(words[i]);
 			}
 		}
 		br.close();
