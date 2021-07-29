@@ -51,7 +51,7 @@ public class BoyerMoore {
              count++;
              //System.out.print("m="+m+" "+badchar[txt[s+m]]+" "+txt[s+m]);
              s += (s+m < n)? m-badchar[txt[s+m]] : 1; // s=4 + 3-badchar[D] s = 4 + 3 - (-1) = 8
-             System.out.print(s);
+             //System.out.print(s);
  
          } 
  
